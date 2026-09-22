@@ -4,12 +4,9 @@ public:
         int m=grid.size();
         int n=grid[0].size();
         int result=0;
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                if(grid[i][j]<0){
-                    result++;
-                }
-            }
+        for(auto &row:grid){
+            int idx=upper_bound(begin(row),end(row),0,greater<int>())-begin(row);
+            result+=(n-idx);
         }
         return result;
     }
