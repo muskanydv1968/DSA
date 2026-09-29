@@ -4,7 +4,7 @@ typedef long long ll;
 bool possible(vector<int>&ranks,ll mid,int cars){
     ll carfixed=0;
     for(int i=0;i<ranks.size();i++){
-        ll repaired =(ll)sqrt(mid/(long double)ranks[i]);
+        ll repaired =sqrt(mid/ranks[i]);
         carfixed+=repaired;
         if(carfixed>=cars){
             return true;
