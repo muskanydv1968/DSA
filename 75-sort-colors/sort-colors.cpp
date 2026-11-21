@@ -10,6 +10,7 @@ public:
                 j++;
             }else if(nums[j]==2){
                 swap(nums[k],nums[j]);
+                // j++;
                 k--;
             }else{
                 swap(nums[i],nums[j]);
@@ -17,6 +18,5 @@ public:
                 j++;
             }
         }
-
     }
 };
